@@ -1,7 +1,8 @@
 class Shoot
 	
 	attr_reader :name
-
+	
+	#@@ indicates a class variable. This can be accessed by all instances of the class 
 	@@shots = []
 
 	def initialize(name)
