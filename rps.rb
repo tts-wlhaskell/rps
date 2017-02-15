@@ -1,6 +1,6 @@
 class Shoot
 	
-	ttr_reader :name
+	attr_reader :name
 
 	@@shots = []
 
@@ -59,7 +59,7 @@ while again
 
 	print "\nInput Shot:"
 	player_shot = Shoot.shots[gets.chomp.to_i - 1]
-	computer_shot = Shoot.shots[rand(0..4)]
+	computer_shot = Shoot.shots[rand(0...Shoot.shots.length)]
 
 	puts "\n#{player_shot.name} vs. #{computer_shot.name}"
 
