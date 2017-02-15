@@ -11,6 +11,8 @@ class Shoot
 		@beats = []
 	end
 
+	#* before an argument name allows any number of arguments to be accepted
+	#great for when you do not know how many arguments will be passed
 	def beats(*args)
 		args.each do |arg|
 			if !@beats.include? arg
@@ -19,6 +21,8 @@ class Shoot
 		end
 	end
 
+	#<=> is the comparison operator in Ruby
+	#0/1/0/-1 mimicks the behavior of  this operator in other classes
 	def <=>(shot)
 		if shot.class == Shoot
 			if shot == self
@@ -33,12 +37,13 @@ class Shoot
 		end
 	end
 
-	def self.shots
+	#self.method_name sets a class method
+	#class methods can be called without an instance of the object
+	def self.shots 
 		@@shots
 	end
 
 end
-
 
 rock = Shoot.new(:rock)
 paper = Shoot.new(:paper)
