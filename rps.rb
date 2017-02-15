@@ -42,10 +42,12 @@ end
 rock = Shoot.new(:rock)
 paper = Shoot.new(:paper)
 scissor = Shoot.new(:scissor)
+lizard = Shoot.new(:lizard)
+spock = Shoot.new(:spock)
 
-rock.beats(scissor)
-paper.beats(rock)
-scissor.beats(paper)
+rock.beats(scissor, lizard)
+paper.beats(rock, spock)
+scissor.beats(paper, scissor)
 
 again = true
 
