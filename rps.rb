@@ -48,6 +48,8 @@ spock = Shoot.new(:spock)
 rock.beats(scissor, lizard)
 paper.beats(rock, spock)
 scissor.beats(paper, scissor)
+lizard.beats(spock, paper)
+spock.beats(rock, scissors)
 
 again = true
 
